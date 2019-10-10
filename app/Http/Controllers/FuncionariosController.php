@@ -38,4 +38,13 @@ class FuncionariosController extends Controller
 
         return response()->json(null, 204);
     }
+    
+    public function pesquisar()
+    {
+        // Busca todos os produtos do banco de dados
+        $produtos = Produto::all();
+        
+        // Chama a view produto.pesquisar
+            return view('produto.pesquisar');
+    }
 }
